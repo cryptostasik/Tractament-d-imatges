@@ -1,5 +1,5 @@
 /*
- * Program.java 1.0 29/09/25
+ * exercici2.java 1.0 29/09/25
  *
  * Suma dos nombres enters
  *

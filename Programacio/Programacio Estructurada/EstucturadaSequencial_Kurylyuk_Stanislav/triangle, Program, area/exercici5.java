@@ -23,7 +23,8 @@ public class exercici5 {
         double base = 3.0;
         double height = 1.5; 
         double area;
-        area = exercici5.calculateArea(base, height);
+        exercici5 p = new exercici5();
+        area = p.calculateArea(base, height);
         System.out.println("Area = " + area);
     }
 }

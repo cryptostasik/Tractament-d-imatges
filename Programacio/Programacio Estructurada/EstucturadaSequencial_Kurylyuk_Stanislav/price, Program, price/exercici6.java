@@ -1,5 +1,5 @@
 /*
- * Program.java 6.0 29/09/25
+ * exercici6.java 1.0 29/09/25
  * 
  * Calcula el preu final d'un producte, tenint en compte l'IVA (en %)i el descompte (en %) aplicats.
  * 
@@ -29,7 +29,8 @@ public class exercici6 {
         double a = 66.0;
         double b = 10.0; 
         double c = 21.0; 
-        double f = exercici6.price(a, b, c);
+        exercici6 p = new exercici6();
+        double f = p.price(a, b, c);
         System.out.print("Price :" + f);
     }
 }

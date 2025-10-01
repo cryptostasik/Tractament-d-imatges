@@ -1,5 +1,5 @@
 /*
- * Program3.java 1.0 29/09/25
+ * exercici4.java 1.0 29/09/25
  *
  * Calcula la mitja aritmètica de tres nombres reals
  *
@@ -26,7 +26,8 @@ public class exercici4 {
         double b = 2.0;
         double c = 3.0;
         double d = 6.0;
-        double suma = exercici4.average(a, b, c, d);
+		exercici4 p = new exercici4();
+        double suma = p.average(a, b, c, d);
         System.out.println(suma);
     }
 }

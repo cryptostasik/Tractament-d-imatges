@@ -24,7 +24,8 @@ public class exercici9 {
 
     public static void main(String[] args) {
         double a = 23.5; 
-        double b = exercici9.celsius2fahrenheit(a);
+        exercici9 p = new exercici9();
+        double b = p.celsius2fahrenheit(a);
         System.out.println("Fahrenheit: " + b);
     }
 }
