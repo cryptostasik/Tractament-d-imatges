@@ -1,10 +1,8 @@
 /*
- * exercici30.java 1.0 08/10/25
+ * exercici31.java 1.0 08/10/25
  *
- * Llegeix les coordenades de dos punts introduïts per teclat i troba 
- * les coordenades del seu punt mig, segons la següent fórmula:
- * ((a  + b ) / 2) | ((c  + d ) / 2)
- *
+ * Llegeix un nombre enter de segons i escriu 
+ * el nombre d’hores, minuts i segons equivalents en format h:m:s.
  * Copyright 2025 Kurylyuk Stanislav
  */
 import java.util.Scanner;
@@ -13,18 +11,25 @@ public class exercici30 {
 
     /**
      *
-     * Calculates the x and y coordinate of the midpoint of the segment between two points.
+     * Calculates the x-coordinate of the midpoint of the segment between two points.
      * 
      * @param cordix1 coordinate of the first point
      * @param cordix2 coordinate of the second point
+     * @return x coordinate of the midpoint of the segment
+     */
+    public double mig_x(double cordix1, double cordix2) {
+        return  (cordix1 + cordix2)/2;
+    }
+	 /**
+     *
+     * Calculates the y-coordinate of the midpoint of the segment between two points.
+     * 
      * @param cordiy1 coordinate of the first point
      * @param cordiy2 coordinate of the second point
-     * @return m1 and m2 coordinate of the midpoint of the segment
+     * @return y coordinate of the midpoint of the segment
      */
-    public double[] average(double cordiy1, double cordiy2 , double cordix1, double cordix2) {
-		double m1 = (cordix1 + cordix2)/2;
-		double m2 = (cordiy1 + cordiy2)/2;
-        return new double[] { m1, m2 };
+    public double mig_y(double cordiy1, double cordiy2) {
+        return  (cordiy1 + cordiy2)/2;
     }
     
     public static void main(String[] args) {
@@ -44,14 +49,13 @@ public class exercici30 {
         System.out.print("Introduïu la coordenada y del segon punt: ");
         cordiy2 = s.nextDouble();
 
-		double[] migpoint = point.average(cordix1, cordiy1, cordix2, cordiy2);
-        double m1 = migpoint[0];
-        double m2= migpoint[1];
+        double mig_x = point.mig_x(cordix1, cordix2);
+        double mig_y = point.mig_y(cordiy1, cordiy2);
         
-        System.out.println("-----------------------------");
-		System.out.printf("Punt mig entre: (%.2f, %.2f) i (%.2f, %.2f) = (%.2f, %.2f)%n",
-                          cordix1, cordiy1, cordix2, cordiy2, m1, m2);
-        
+        System.out.println("Primer coordenada: " + cordix1 + "," + cordiy1);
+        System.out.println("Segon coordenada: " + cordix2 + "," + cordiy2);
+        System.out.println("Punt mig del segment: " + mig_x + "," + mig_y);
 		s.close();
     }
 }
+
