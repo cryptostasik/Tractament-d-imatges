@@ -1,45 +1,45 @@
 /*
- * exercici38.java 1.0 10/10/25
+ * exercici39.java 1.0 13/10/25
  *
- * Obté el nombre mínim d'entre dos nombres reals.
+ * Obté el nombre màxim d'entre dos nombres reals
  * Copyright 2025 Kurylyuk Stanislav
  */
 import java.util.Scanner;
 
 public class Program {
     /**
-     * Finds the minimum of two real numbers.
+     * Finds the maximum of two real numbers.
      * 
      * @param num1 the first real number
      * @param num2 the second real number
-     * @return the minimum of the two numbers
+     * @return the maximum of the two numbers
      */
-    public static double min2(double num1, double num2) {
-        // Check if num1 is less than num2
-        if (num1 < num2) {
-            // Return num1 if it is smaller
+    public static double max2(double num1, double num2) {
+        if (num1 >= num2) {
             return num1;
+        } else {
+            return num2;
         }
-        // Return num2 if it is smaller or equal
-        return num2;
     }
+
     public static void main(String[] args) {
-		Program p = new Program();
         Scanner s = new Scanner(System.in);
-        double num1, num2,result,diff;
+        double num1, num2, max, diff;
 
         System.out.println("Introduïu el primer nombre real: ");
         num1 = s.nextDouble();
         System.out.println("Introduïu el segon nombre real: ");
         num2 = s.nextDouble();
 
-        result = p.min2(num1, num2);
-        
+        // Find the maximum
+        max = max2(num1, num2);
+
         // Calculate the absolute difference
         diff = Math.abs(num1 - num2);
 
-        System.out.printf("El mínim entre %.2f i %.2f és %.2f\n", num1, num2, result);
+        System.out.printf("El màxim entre %.2f i %.2f és %.2f\n", num1, num2, max);
         System.out.printf("La diferència (distància) entre els dos és %.2f\n", diff);
+
         s.close();
     }
 }
