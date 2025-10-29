@@ -17,7 +17,7 @@ public class Program {
      */
     public static double price(double a, double b) {
         // Calculate the price after applying the discount
-        double f = a * (1 - b / 100);
+        double f = a * (1 + b / 100);
         return f;
     }
     public static void main(String[] args) {
