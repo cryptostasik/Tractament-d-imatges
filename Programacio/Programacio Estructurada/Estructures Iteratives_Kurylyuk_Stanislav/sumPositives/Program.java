@@ -1,5 +1,5 @@
 /*
- * Program.java 1.0 5/11/25
+ * Program.java 1.0 7/11/25
  *
  * exercicii15
  *
@@ -10,30 +10,33 @@
  */
 import java.util.Scanner;
 public class Program {
-	
-    public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-		int i,n,numero,min,max;
-
-        System.out.print("Introduïu la quantitat de números (n):\n");
-        n = s.nextInt();
-
-        System.out.print("Introduïu un numero 1: \n");
-        numero = s.nextInt();
-        max = numero;
-        min = numero;
-
-        for (i = 2; i <= n; i++) {
-            System.out.printf("Introduïu un numero %d:\n",i);
-            numero = s.nextInt();
-            if (numero > max) {
-                max = numero;
-            } else if (numero < min) {
-			    min = numero;
+    /**
+     * Donats two name enters n1 i n2 amb n1 < n2 , 
+     * calculates the sum of the names entered positius that have occurred in the interval [n1, n2].
+     * 
+     * @param args command line arguments (not used)
+     */
+    public static void sumPositives(int n1, int n2) {
+		int i;
+		int suma = 0;  
+        for (i = n1 ; i <= n2; i++) {
+            if (i > 0) {	
+				suma += i;  //suma = suma + i;
             }
+            System.out.print(suma + " ");
         }
-        System.out.println("El més gran: " + max);
-        System.out.println("El més petit: " + min);
-
+    }
+    public static void main(String[] args) {
+		int n1,n2;
+		
+		Program p = new Program();
+		Scanner s = new Scanner(System.in);
+		
+		System.out.print("Introduïu un numero(n1)");
+        n1 = s.nextInt();
+        System.out.print("Introduïu un numero(n2)");
+        n2 = s.nextInt();
+        
+        p.sumPositives(n1,n2);
     }
 }
