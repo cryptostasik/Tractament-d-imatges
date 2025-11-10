@@ -1,5 +1,5 @@
 /*
- * Program.java 1.0 07/11/25
+ * Program.java 1.0 10/11/25
  *
  * exercicii31
  *
@@ -20,28 +20,41 @@ public class Program {
      * 
      * @param args command line arguments (not used)
      */
-    public static int fibonacci(int n) {
-        int i;
-        fibonacci;
-        
-        while ()
-        for (i = n ; i <= n; i++) {
-			if (i > 0){
-				factorial = factorial * i ;
-				}
+    public static void fibonacci(int limit) {
+
+        if (limit < 0) {
+            System.out.println("Error: el número ha de ser positiu o zero.");
+            return;
         }
-        return factorial;
+
+        if (limit == 0) {
+            System.out.println("0");
+            return;
+        }
+        int t1 = 0; 
+        int t2 = 1;  
+        int t3;
+        
+        System.out.print("Fibonacci " + limit + ": ");
+        System.out.print(t1 + " " + t2); 
+
+        while (true) {
+            t3 = t1 + t2;
+            if (t3 > limit) {
+                break;  
+            }
+            System.out.print(" " + t3);
+            t1 = t2;
+            t2 = t3;
+        }
+        System.out.println(); 
     }
 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-		int n,resultat;
-		
-        System.out.print("Introduïu el numero de la (factorial): ");
-        n = s.nextInt();
-
-        resultat = factorial(n);
-        System.out.println(resultat);
-
+        Program p = new Program();
+        System.out.print("Introduïu un nombre enter positiu: ");
+        int n = s.nextInt();
+        p.fibonacci(n);
     }
 }
