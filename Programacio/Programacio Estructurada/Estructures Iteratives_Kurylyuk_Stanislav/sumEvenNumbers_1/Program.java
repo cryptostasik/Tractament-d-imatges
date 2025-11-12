@@ -8,7 +8,7 @@
  * Copyright 2025 Kurylyuk Stanislav
  */
 import java.util.Scanner;
-public class Program {
+public class ProgramTUI {
     /**
      * Get a sequence of names ending in zero and write the sum of those that are equal.
      * 
