@@ -1,65 +1,58 @@
 /*
  * ProgramTUI.java 1.0 17/11/2025
  *
- * exercicii41 
+ * exercici41
  *
- * Llegeix una seqüència de tres o més nombres enters acabada en zero i escriu si la seqüència és una progressió aritmètica.
+ * Llegeix una seqüència de tres o més nombres enters acabada en zero 
+ * i escriu si la seqüència és una progressió aritmètica.
  *
  * Copyright 2025 Kurylyuk Stanislav
  */
-
 import java.util.Scanner;
+
 public class ProgramTUI {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        int num1,num2,difference,previous,current;
 
-        System.out.println("PROGRESSIÓ ARITMÈTICA");
-        System.out.println("Introdueix nombres enters (acaba amb 0)\n");
+        System.out.println("Enter a sequence of integers (at least 3 numbers)");
+        System.out.println("Finish the sequence by entering 0\n");
+        
+        System.out.print("→ Enter the 1st number (0 to finish): ");
+        num1 = scan.nextInt();
+        
+        System.out.print("→ Enter the 2nd number (0 to finish): ");
+        num2= scan.nextInt();
 
-        // Читаємо перше число
-        System.out.print("Entra un nombre (0 per acabar): ");
-        int primer = scan.nextInt();
-        if (primer == 0) {
-            System.out.println("No");
-            return;
-        }
+        difference = num2 - num1;
+        previous = num2;
+        boolean isArithmetic = true;
 
-        // Читаємо друге число
-        System.out.print("Entra un nombre (0 per acabar): ");
-        int segon = scan.nextInt();
-        if (segon == 0) {
-            System.out.println("No"); 
-            return;
-        }
-
-        // Визначаємо різницю (d)
-        int dif = segon - primer;
-
-
-        int anterior = segon;
-        boolean esProgressio = true;  // припускаємо, що так
+        System.out.println("Common difference (d) = " + difference);
+        System.out.println("Now enter the rest of the sequence:\n");
 
         while (true) {
-            System.out.print("Entra un nombre (0 per acabar): ");
-            int actual = scan.nextInt();
+            System.out.print("→ Enter next number (0 to finish): ");
+            current = scan.nextInt();
 
-            if (actual == 0) {
-                break;  
+            if (current == 0) {
+                break;
             }
 
-
-            if (actual - anterior != dif) {
-                esProgressio = false;
+            // Check if the difference is still the same
+            if (current - previous != difference) {
+                isArithmetic = false;
             }
 
-            anterior = actual;  // оновлюємо "попереднє" число
+            previous = current;  // update previous for next iteration
         }
-
-
-        if (esProgressio) {
-            System.out.println("Sí");
+        
+        if (isArithmetic) {
+            System.out.println("YES → The sequence IS an arithmetic progression!");
+            System.out.println("Common difference d = " + difference);
         } else {
-            System.out.println("No");
+            System.out.println("NO → The sequence is NOT an arithmetic progression.");
+            System.out.println("The difference changed at some point.");
         }
     }
 }
