@@ -8,56 +8,47 @@
  *
  * Copyright 2025 Kurylyuk Stanislav
  */
-
-import java.util.Scanner;
-
 public class ProgramTUI {
 	/**
      * 
-     * Read a sequence of grades obtained by a group of students ending in -1 and write how many students obtained
-	 * the grades MD, I, S,B, N, E. The correspondence between grades and grades is: MD=[0, 3) I=[3, 5) S=[5, 6) B=[6, 7) N=[7, 9) Ex=[9, 10]
+     * Cada alumne d'una classe té un codi incremental començant pel número 
+     * 1. Fer un programa que demani la nota dels alumnes d'una classe per ordre de codi 
+     * i posteriorment mostri els codis dels alumnes de la classe que han tret insuficient,
+     *  un aprovat, un bé, un notable i un excel.lent. Els intervals per calcular la nota són:
+     * 
+     * [0,5) Insuficient 
+     * [5,6) Aprovat
+     * [6,7) Bé
+     * [7,9) Notable
+     * [9,10] Excel.lent
+     * 
+     * S'ha de tenir en compte que una classe té 35 alumnes
      * 
      * @param args command line arguments (not used)
      */
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-
-        int md = 0, i = 0, s = 0, b = 0, n = 0, ex = 0;
-        double grade;
-
-        System.out.println("ACADEMIC GRADES");
-        System.out.println("Enter grades (0-10). Finish with -1\n");
-
-        System.out.print("Enter a grade (-1 to finish): ");
-        grade = scan.nextDouble();
-
-
-        while (grade != -1) {
-			
-            if (grade < 0 || grade > 10) {
-                System.out.println("Error: grade must be between 0 and 10 ");
-            }
-            
-            // Assign the correct category 
-            else if (grade < 3) {
-                md++;
-            } else if (grade < 5) {
-                i++;
-            } else if (grade < 6) {
-                s++;
-            } else if (grade < 7) {
-                b++;
-            } else if (grade < 9) {
-                n++;
-            } else {
-                ex++;
-            }
-
-            System.out.print("Enter a grade (-1 to finish): ");
-            grade = scan.nextDouble();
-        }
-
+        int i = 0, a = 0, b = 0, n = 0, ex = 0;
+        int first = 0, rec = 0;
+		for (i = 0; i < num.length; i++) {
+			first = num[i];
+			for ()
+			if (first < 5) {
+				i++;
+			} else if (first < 6) {
+				s++;
+			} else if (first < 7) {
+				b++;
+			} else if (first < 9) {
+				n++;
+			} else {
+				ex++;
+			}
+		}
+		
+		double[] num = {4.9, 10.0, 3.9, 6.1, 7.0, 6.5, 8.7, 5.4};
+        Program p = new Program();
+        int[] result = p.join(num);
         System.out.println("\n--- RESULTS ---");
-        System.out.printf("MD = %d ,I = %d ,S = %d ,B = %d ,N = %d ,Ex = %d", md,i,s,b,n,ex);
+        System.out.printf("I = %d ,S = %d ,B = %d ,N = %d ,Ex = %d",i,a,b,n,ex);
     }
 }
