@@ -10,7 +10,6 @@
  * Copyright 2025 Kurylyuk Stanislav
  */
 import java.util.Scanner;
-
 public class Program {
     public int[] join(int[] num1, int[] num2) {
 		int i;

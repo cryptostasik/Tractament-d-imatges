@@ -1,5 +1,22 @@
+/*
+ * ProgramTUI.java 1.0 10/12/2025
+ *
+ * exerciciv21
+ *
+ * Fer un programa que llegeixi una taula numèrica real, 
+ * l'ordeni pel mètode de la bombolla i escrigui els seus elements.
+ *
+ * Copyright 2025 Kurylyuk Stanislav
+ */
 import java.util.Arrays;
 public class Program {
+	/**
+     * 
+     * Make a program that reads a real number table, 
+     * sorts it using the bubble method and writes its elements.
+     * 
+     * @param args command line arguments (not used)
+     */
     public void bubbleSort(double[] a) {
         double aux;
         int n = a.length;
