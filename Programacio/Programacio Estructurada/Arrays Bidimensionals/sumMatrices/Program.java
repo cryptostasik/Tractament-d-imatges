@@ -16,21 +16,22 @@ public class Program {
      * 
      * @param args command line arguments (not used)
      */
-    public static int[][] multiplyMatrices(int [][]a,int [][]b,int size) {
+   public static int[][] multiplyMatrices(int[][] a, int[][] b, int size) {
         int[][] m = new int[size][size];
         
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-				a[]
+                m[i][j] = a[i][j] + b[i][j];
             }
         }
+        
         return m;
     }
     public static void main(String[] args) {
         int [][]a = {{3,8},{4,6}};
         int [][]b = {{4,0},{1,-9}};
-        int[][] matriu = multiplyMatrices(a,b);
         int size = a.length;
+        int[][] matriu = multiplyMatrices(a ,b ,size);
         
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
