@@ -40,3 +40,6 @@ public class Program {
         System.out.println(p.allVowels("aeioup"));         
     }
 }
+//int a = -1;
+// a = s.indexOf('a');
+// return a != -1 && ...
