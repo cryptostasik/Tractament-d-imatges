@@ -20,13 +20,7 @@ public class Program2 {
      */
     public boolean isCharInString(char c, String s) {
         boolean found = false;
-        for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) == c) {
-                found = true;
-            }
-        }
-        return found;
-    }
+        
 
     public static void main(String[] args) {
         Program2 p = new Program2();          
