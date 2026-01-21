@@ -20,15 +20,20 @@ public class Program {
      * @param s2 a string (sub)
      * @return the int how many times the second appears in the first.
      */
-    public String withoutString(String s1, String s2) {
-		return s1.replaceFirst(s2, "");
+    public String withoutString(String s1 , String s2) {
+		int pos = s1.indexOf(s2);
+		String s3 = "";
+		if (pos != -1) {
+			s3 = s1.substring(0, pos) +  s1.substring((pos + s2.length()), s1.length());
+		}		
+		return s3;
 	}
 
     public static void main(String[] args) {
         Program p = new Program();
-        String s1 = "banana";
-        String s2 = "na";
+        String s1 = "portal";
+        String s2 = "rt";
         String without = p.withoutString(s1,s2);
-        System.out.printf(without);
+        System.out.print(without);
     }
 }
