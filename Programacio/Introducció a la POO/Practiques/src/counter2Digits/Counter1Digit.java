@@ -1,11 +1,19 @@
-package counter1digit;
+package counter2Digits;
 
 public class Counter1Digit {
-    
+	
     private int counter;
     
     public Counter1Digit() {
         this.counter = 0;
+    }
+    
+    public Counter1Digit(int counter) {
+    	if (counter >= 10 || counter < 0) {
+            this.counter = 0;
+        } else {
+            this.counter = counter;
+        }
     }
     
     public int getCounter() {
@@ -29,6 +37,15 @@ public class Counter1Digit {
         } else {
             this.counter = 0;
         }
+    }
+    
+    public int increment() {
+        this.counter++;
+        if (this.counter > 9) {
+            this.counter = 0;
+            return this.counter; 
+        }
+        return this.counter;
     }
     
     @Override

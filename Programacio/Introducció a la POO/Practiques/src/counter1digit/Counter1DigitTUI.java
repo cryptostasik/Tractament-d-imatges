@@ -1,19 +1,17 @@
 package counter1digit;
 
 public class Counter1DigitTUI {
-	public static void main(String[] args) {
-		 Counter1Digit c = new Counter1Digit();
 
-	     System.out.println(c);
-	     
-	     c.uppcounter();
-	     System.out.println(c);
-	     
+    public static void main(String[] args) {
 
-	     c.resetCounter();
-	     System.out.println(c); 
+        Counter1Digit digit = new Counter1Digit();
 
-	     c.setCounter(123);
-	     System.out.println(c);
-	}
+        System.out.println("");
+
+        for (int i = 0; i < 10; i++) {
+            System.out.println(digit);
+            digit.uppcounter();
+        }
+        System.out.println(digit);
+    }
 }
