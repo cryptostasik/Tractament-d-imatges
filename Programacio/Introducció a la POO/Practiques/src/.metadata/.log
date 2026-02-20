@@ -1,0 +1,13 @@
+!SESSION 2026-02-20 12:16:38.622 -----------------------------------------------
+eclipse.buildId=4.32.0.20240606-1231
+java.version=22.0.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY ch.qos.logback.classic 1 0 2026-02-20 12:16:39.828
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2026-02-20 12:16:44.040
+!MESSAGE Logback config file: /home/users/inf/hiaw1/a253022sk/Videos/kurylyuk_stanislav/Programacio/Introducció a la POO/Practiques/src/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.6.1.20240411-1122.xml
