@@ -33,7 +33,7 @@ public class Book {
 
     /**
      * Constructor with all fields.
-     * 
+     *  
      * @param code the book copy identifier code
      * @param isbn the book's ISBN
      * @param title the book's title

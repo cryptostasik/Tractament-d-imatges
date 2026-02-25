@@ -2,8 +2,8 @@ package chronometer;
 import java.util.Scanner;
 public class ChronometerTUI {
 	public static void main(String[] args) {
-		Chronometer chronometer = new Chronometer();
 		Scanner s = new Scanner(System.in);
+		Chronometer chronometer = new Chronometer();
 		boolean running = true;
 		while (running) {
 			System.out.println("1 - Start");
