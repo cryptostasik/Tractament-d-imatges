@@ -13,6 +13,9 @@ public class Company {
 		this.name = "Cola";
 		this.sector = "Bisnes";
 	}
+	public Company(int cif) {
+		this.cif = cif;
+	}
 	public Company(int cif,String name,String sector) {
 		this.cif = cif;
 		this.name = name.trim();

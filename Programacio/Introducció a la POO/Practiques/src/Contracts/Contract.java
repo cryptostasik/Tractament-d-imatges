@@ -17,7 +17,7 @@ public class Contract {
 	public Contract(int code) {
 		this.code = 123;
 	}
-	public Contract (int code,String initialDate,String endDate,Company company) {
+	public Contract (int code,String initialDate,String endDate) {
 		this.code = code;
 		this.initialDate = initialDate;
 		this.endDate = endDate;
@@ -61,10 +61,13 @@ public class Contract {
 	public Company getCompany() {
 		return company;
 	}
-	public void setCompany(Company company) {
-		this.company = company;
+	public String getInitialDate() {
+		return initialDate;
 	}
-	public void setCode(int code) {
-		this.code = code;
+	public String getEndDate() {
+		return endDate;
+	}
+	public void setCompany(Company company) {
+	    this.company = company;
 	}
 }
