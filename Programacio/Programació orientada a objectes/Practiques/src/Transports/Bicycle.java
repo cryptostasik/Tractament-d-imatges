@@ -11,12 +11,5 @@ public class Bicycle extends Transport{
 		super(identificador, speed);
 		this.nGears = nGears;
 	}
-
-
-
-
-	public double cost(double distance) {
-		return distance * speed * nGears;
-	}
 	
 }

@@ -1,5 +1,5 @@
 package Transports;
 
-public class Underground {
+public class Underground extends Transport{
 
 }
